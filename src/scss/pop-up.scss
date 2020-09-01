@@ -41,7 +41,7 @@
   max-width: 300px;
   width: 100%;
   background-color: #ffffff;
-  border: 1px solid royalblue;
+  
 
   &__close {
     position: absolute;
@@ -90,7 +90,6 @@
     width: 100%;
     display: grid;
     place-items: center;
-    border: 1px solid green;
     text-align: center;
     letter-spacing: 0.07em;
   }
