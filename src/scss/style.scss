@@ -1,3 +1,6 @@
+@import "pop-up.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @font-face {
   font-family: "FuturaPT";
   src: url("../src/fonts/FuturaPT-Book.eot");
@@ -71,7 +74,7 @@ body {
   }
   &__btn:hover {
     box-shadow: inset 0 0 8px 2px #c29166;
-    transition: 0.3s;
+    transition: 0.2s;
     background-color: #f5f5dc;
   }
 }
