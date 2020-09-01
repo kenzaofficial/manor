@@ -1,0 +1,122 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(-1000px);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {     
+  0%, 100%                {transform: translateX(0);    }
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80%      {transform: translateX(10px); }
+}
+
+.modal-content-error {
+  animation: shake 0.6s;
+}
+
+.modal-content-wrapper {
+  display: none;
+}
+.modal-content-wrapper-show {
+  display: grid;
+  animation: bounce 0.6s;
+}
+.modal-content {
+  position: relative;
+  display: grid;
+  top: -100%;
+  left: 0;
+  place-items: center;
+  margin: 0 auto;
+  padding: 37px 39px 44px 31px;
+  max-width: 300px;
+  width: 100%;
+  background-color: #ffffff;
+  
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__close::before,
+  &__close::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 12px;
+    height: 1px;
+    background-color: #747474;
+    border-radius: 1px;
+  }
+
+  &__close:before {
+    transform: rotate(45deg);
+  }
+
+  &__close::after {
+    transform: rotate(-45deg);
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: "Bebas Neue", FuturaPT; // почему не подключается  шрифт?
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #c5c5c5;
+  }
+
+  &__form {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    letter-spacing: 0.07em;
+  }
+  &__item {
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #c29166;
+    text-align: center;
+  }
+  &__btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+    max-width: 230px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 300;
+    color: #c29166;
+    border: 1px solid #c29166;
+    border-radius: 100px;
+  }
+  span {
+    color: #c5c5c5;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
